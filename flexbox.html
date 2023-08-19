@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            background-color:cyan;
+            border-radius: 5px;
+            width:50%;
+            margin: auto;
+
+        }
+
+        .item {
+            margin: 5px;
+            text-align: center;
+            width: 12rem;
+            height: 12rem;
+            border: 2px solid black;
+            border-radius: 100%;
+            background-image:linear-gradient(pink,cyan,blue,pink) ;
+        }
+        .content{
+            text-align: center;
+            box-sizing: content-box;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            gap: 8px;
+
+        }
+
+        a,
+        button {
+            width: 48%;
+            height: 20px;
+            margin-top: 3px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+        }
+
+        a {
+            border: 2px solid black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        a:hover,
+        button:hover {
+            background-color: green;
+        }
+
+        @media screen  and (min-width:300px) and (max-widtd:800px){
+            .container{
+                width:80%;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>FLEX PROPERTIES USING </h2>
+    <div class="container">
+        <div class="item" id="box1">
+            <div class="content">
+                <h4> Flex</h4>
+                <small>learn more about flex</small>
+               
+            </div>
+            <div class="btn">
+                <a href="#" target="_blanck">More</a>
+                <button type="Submit" onclick="alert('Thanks for submitted')">Click</a>
+            </div>
+        </div>
+        <div class="item" id="box2">
+            <div class="content">
+                <h4>
+                    flex-grow
+                </h4>
+                <small>learn more about flex-grow</small>
+            </div>
+            <div class="btn">
+                <a href="#" target="_blanck">More</a>
+                <button type="Submit" onclick="alert('Thanks for submitted')">Click</a>
+            </div>
+        </div>
+        <div class="item" id="box3">
+            <div class="content">
+                <h4>flex-shrink</h4>
+            </div>
+            <small>learn more about flex-shrink</small>
+            <div class="btn">
+                <a href="#" target="_blanck">More</a>
+                <button type="Submit" onclick="alert('Thanks for submitted')">Click</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
