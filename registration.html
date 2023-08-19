@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            background-color:white;
+            }
+        form{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            width:40%;
+            margin:auto;
+            border-radius:10px;
+            background-color:#ebebeb;
+            box-shadow: -4px -4px 0px 2px white,
+            4px 4px 0px 0px #ebebeb;
+            }
+        .input{
+            margin:3px;
+            width:80%;
+            
+        }
+        
+       .input input[type="text"], input[type="email"], input[type="number"], select, textarea{
+            width:100%;
+            height:30px;
+            border:none;
+            outline:none;
+            border-radius:7px;
+            text-align:center;
+            
+        }
+        select {
+            background-color:white;
+        }
+        textarea{
+            height:50px;
+            }
+            
+          
+            
+        button{
+            width:123%;
+            position:relative;   
+            top:6px;
+            background-color:blue;
+            color:white;
+            height:25px;
+            border-radius:5px;
+            border:none;
+            outline:none;
+            margin-left:0px;
+            
+        }
+        button:hover{
+            background-color:green;
+        }
+        
+            
+         a{
+             text-decoration:none;
+             color:white;
+             
+         }
+
+         @media screen and (min-width: 250px) and (max-width:890px) {
+            form{
+                width:80%;
+            }
+
+         }
+
+
+            
+     </style>
+</head>
+<body>
+       <form>
+       <h2 > Registration form</h2>
+           <div class="input">
+            <input type="text" placeholder="Enter your first name". required/>
+            </div>
+            <div class="input">
+            <input type="text" placeholder="Enter your last name" required/>
+            
+           </div>
+           <div class="input">
+            <input type="number" placeholder="Phone No" required/>
+           </div>
+           <div class="input">
+            <input type="email" placeholder="Email" required/>
+            </div>
+       <div class="input">
+           <b> Select your branch</b>
+            <div class="radio">
+              <input type="radio" name="branch"/>CSE
+            </div>
+            <div class="radio">
+               <input type="radio" name="branch"/>IT
+            </div>
+             <div class="radio">
+               <input type="radio" name="branch"/>CVIL
+            </div>
+            <div class="radio">
+              <input type="radio" name="branch"/>EC
+            </div>
+          </div> 
+            
+        <div class="input">  
+           <b>choose multiple options</b>
+        <div class="checkbox">
+            <input type="checkbox"/>Python
+        </div>
+         <div class="checkbox">
+               <input type="checkbox"/> Java
+            </div>
+         <div class="checkbox">
+               <input type="checkbox"/> Javascript 
+            </div>
+           <div class="checkbox">
+               <input type="checkbox"/> web development 
+            </div>
+          <div class="checkbox">
+               <input type="checkbox"/> C language 
+            </div>
+          <div class="checkbox">
+               <input type="checkbox"/> C++
+            </div>
+           <div class="checkbox">
+               <input type="checkbox"/> C#
+           </div>
+            <div class="checkbox">
+               <input type="checkbox"/> PHP
+            </div>
+            <div class="checkbox">
+               <input type="checkbox"/> node js
+            </div>
+            <div class="checkbox">
+               <input type="checkbox"/> react
+            </div>
+           </div>
+        <div class="input">
+           <b>Where are you from</b>
+           <br>
+           <select name="city">
+              <option value="">Select city</option>
+              <option value="Varanasi">Varanasi</option>
+              <option value="Patna">Patna</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Lakhnaw">Lakhnaw</option>
+           </select>  
+        </div>
+        <div class="input">
+        <textarea type="text" placeholder="Share your opinions" required></textarea>
+        <div>
+        <div class="input">
+           <button type="submit" ><a href="submitdata.html" >SUBMIT </a></button>
+        </div>
+           
+             
+       </form>
+     
+</body>
+</html>
