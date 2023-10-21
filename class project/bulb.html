@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        body {
+            background-color: #ebebeb;
+        }
+
+        div {
+            height: 300px;
+            width: 200px;
+            margin: auto;
+            position: relative;
+            top: 50px;
+        }
+
+        div #img {
+            height: 300px;
+            width: 200px;
+            border-radius: 2000%;
+            border: 2px solid black;
+
+        }
+
+        div button {
+            position: relative;
+            bottom: 20px;
+            left: 50px;
+            width: 50%;
+
+        }
+
+        .onbulb {
+            background-color: yellow;
+            box-shadow: 0px 0px 300px 30px yellow;
+
+        }
+        input{
+            background-color: transparent;
+            border: none;
+            outline:none;
+            color:cyan;
+            text-align: center;
+            font-size: larger;
+            text-shadow: 2px 2px 20px 10px cyan;
+            animation-timeline: 3s;
+        }
+        imput::placeholder{
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <input  id="text" type="text">
+    <div class="name" id="rehan"  data-suyan="programmer" data-rehan="coder">
+        <div id="img" class="bulb"></div>
+        <button id="btn">on</button>
+    </div>
+    <Script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function () {
+            let bulb = document.getElementById('img');
+            bulb.classList.toggle('onbulb');
+            if(btn.innerHTML=='off'){
+                btn.innerHTML='on'
+            }
+            else{
+                btn.innerHTML='off'
+            }
+        })
+
+
+        let a=text.value;
+        document.getElementById('text').innerHTML=a;
+
+    </Script>
+</body>
+
+</html>

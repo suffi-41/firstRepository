@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <img src="/C:\Users\mohdb\Downloads\Snapchat-114866084.jpg" alt="">
+    <nav class="navigation navbar">
+        <li class="nav" id="home"><a href="#">Home</a></li>
+        <li class="nav" id="About"><a href="#">About</a></li>
+        <li class="nav" id="About"><a href="/profile.html">Profile</a></li>
+        <li class="nav" id="shopping"><a href="#">Shooping</a></li>
+        <li class="nav" id="login">
+            <select id="login_button" onchange="login_function(value)">
+                <option value="">Login now</option>
+                <option value="logout">Logout</option>
+                <option value="login">Login</option>
+                <option value="ragistration">Ragistration</option>
+            </select>
+        </li>
+        <select name="body_color" id="body-color" onchange="background_color(value)">
+
+            <option value="white">choose background color</option>
+            <option value="#ebebeb">#ebebeb</option>
+            <option value="black " >Black</option>
+            <option value="cyan">Cyan</option>
+            <option value="red">red</option>
+            <option value="blue">Blue</option>
+        </select>
+        
+      
+    
+    </nav>
+    <section class="layout">
+        <section class="login_page page">
+            <h2>Login</h2>
+            <input id="name" type="text" placeholder="user name...">
+            <input id="password" type="password" placeholder="password">
+            <input id="submit" type="submit" onclick="alert('Login successfully')">
+        </section>
+        <section class="ragistration_page second_page ">
+            <h2>Ragistration</h2>
+            <input id="name" type="text" placeholder="Name..." required>
+            <input id="phone" type="number" placeholder="Phone No" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <select name="gender" required>
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input id="password" type="" placeholder="password">
+            <input id="confirm_password" type="password" placeholder="confirm password">
+            <input id="submit" type="submit" onclick="alert('Sumitted successlly')">
+            <input id="submit" type="reset" onclick="alert('Reset data')">
+        </section>
+    </section>
+    
+    <div id="joke">hello</div>
+  
+    <script src="javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ebebeb;
+    height: 100%;
+    width:100%;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: cyan;
+    --second-color: white;
+    --third-color:#ebebeb;
+    --border-radius: 10px;
+    --border-radius-second:5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.navigation .nav {
+    list-style: none;
+    padding: 2px;
+}
+
+.navigation .nav a {
+    font-size: 20px;
+    ;
+    text-decoration: none;
+}
+
+.navigation .nav a:hover {
+    border-bottom: 2px solid black;
+
+}
+
+.navigation .nav #login{
+    border:none;
+    outline:none;
+    list-style: none;
+}
+
+
+@media only screen and (min-width:100px) and (max-width:400px) {
+    .navigation {
+        display: flex;
+        gap: 2px;
+    }
+    .navigation .nav {
+        padding: 0px;
+
+    }
+    .navigation .nav a {
+        font-size: 15px;
+        margin-left: 8px;
+
+    }
+
+
+}
+.login_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:var(--second-color);
+    border-radius: var(--border-radius);
+   
+    width:200px;
+    height:300px;
+    transition: all 1s ease-in-out;
+}
+
+.ragistration_page,.profile_page{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    background:var(--second-color);
+    border-radius: var(--border-radius);
+    width:200px;
+    height:300px;
+    transition: all 1s ease-in-out;
+}
+.ragistration_page input{
+    outline:none;
+    border:none;
+    margin:2px;
+    border-radius: var(--border-radius-second);
+    padding: 3px;
+}
+.ragistration_page select{
+    width: 165px;
+    outline:none;
+    border:none;
+    border-radius: var(--border-radius-second);
+    padding: 3px;
+    margin:2px;
+    
+}
+
+.ragistration_page input[type="submit"]{
+    position: relative;
+    top:10px;
+    width:170px;
+    background-color: blue;
+    color:var(--second-color);
+
+}
+.ragistration_page input[type="reset"]{
+    position: relative;
+    top:7px;
+    width:170px;
+    background-color:blue;
+    color:var(--primary-color);
+}
+.ragistration_page input[type="reset"]:hover{
+    background-color: red;
+}
+.ragistration_page input:hover{
+    color:white;
+}
+#profile{
+    cursor: pointer;
+    font-size:20px;
+    
+}
+#profile_name:hover{
+    border-bottom:2px solid black;
+    
+}
+
+.page{
+    position: relative;
+    top:200px;
+    margin:auto;
+    z-index:5;
+}
+
+.second_page{
+    position: relative;
+    margin:auto;
+    z-index:4;
+    bottom:100px;
+    background-color: cyan;
+
+}
+
+.third_page{
+    position: relative;
+    margin:auto;
+    z-index:3;
+    top:200px;
+    background-color:rgb(21, 255, 0);
+    box-shadow: -2px -2px 5px 3px white;
+}
+
+.login_page input{
+    margin-top:10px ;
+    width:80%;
+    height: 10%;
+    outline:none;
+    border:none;
+}
+
+.profile_page{
+    text-align:center;
+    padding:0px;
+}
+
+.login_page input[type="submit"]{
+    position: relative;
+    top:10px;
+    width:60%px;
+    border-radius: var(--border-radius);
+    background-color: blue;
+    color: white;
+    
+}
+
+
+.login_page input::placeholder{
+      background-color:var(--third-color);
+      border-radius: var(--border-radius);
+      padding: 10px;
+}
+
+.transform{
+    animation-name:layout;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-iteration-count: initial;
+    z-index:11;
+
+}
+
+.z_index{
+    z-index:0;
+}
+
+@keyframes layout{
+    10%{
+        transform: translate(-4px,-4px,);
+    }
+    30%{
+        transform: translate(-20px,-20px);
+    }
+    50%{
+        transform: translate(-40px,-40px);
+       
+    }
+    80%{
+        transform: translate(40px,40px);
+        
+    }
+    90%{
+        transform: translate(10px,10px);
+    }
+    100%{
+        transform: translate(2px,2px);
+    }
+}
+
+.animation{
+    animation-name:animation;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+    animation-iteration-count: initial;
+}
+@keyframes animation{
+    10%{
+        transform: translate(4px,4px,);
+    }
+    30%{
+        transform: translate(20px,20px,);
+    }
+    50%{
+        transform: translate(40px, 40px);
+    }
+    80%{
+        transform: translate(-40px,-40px);
+    }
+    90%{
+        transform: translate(-10px,-10px);
+    }
+    100%{
+        transform: translate(-2px,-2px);
+    }
+}
+
+nav #body_color{
+    outline:none;
+    border:none;
+    border-radius:5px;
+    
+}
+

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      header {
+        width: vw;
+      }
+
+      header .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: #ebebeb;
+        font-family: Arial, Helvetica, sans-serif;
+        gap: 3rem;
+        padding: 1rem;
+        background-color: rgb(78, 108, 97);
+      }
+
+      .navbar .tiem {
+        list-style: none;
+        background-color: rgb(74, 197, 197);
+        padding: 0.2rem;
+        border-radius: 5px;
+      }
+
+      .tiem:hover {
+        background-color: rgb(30, 128, 128);
+      }
+
+      .tiem a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .tiem a:hover {
+        color: white;
+      }
+
+      .img {
+        width: vw;
+        height: 30rem;
+      }
+      .img img {
+        width: 100%;
+        height: 100%;
+      }
+      article {
+        width: vw;
+        background-color: #ebebeb;
+        margin-top: 20px;
+        background-color: cyan;
+      }
+
+      .container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px;
+
+        gap: 0.4rem;
+      }
+
+      .container .item {
+        width: 20rem;
+        height: 22.5rem;
+        border: 2px solid black;
+        margin-top: 3px;
+      }
+
+      .item .content {
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .wiki {
+        width: 7rem;
+        height: 1.5rem;
+        background-color: blue;
+        border-radius: 2px;
+        text-align: center;
+        margin-left: 2px;
+      }
+
+      .wiki a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+      }
+
+      footer{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        margin-top: 10px;
+      }
+
+      #facebook{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZdI7bDsZxSPEo_TEzFMptHjHPRHN_WJVNA&usqp=CAU");
+        background-repeat:no-repeat ;
+        background-size: cover;
+        width:3rem;
+        height:3rem;
+      }
+
+      #watsapp{
+        background-image:url("https://w7.pngwing.com/pngs/110/230/png-transparent-whatsapp-application-software-message-icon-whatsapp-logo-whats-app-logo-logo-grass-mobile-phones-thumbnail.png");
+        background-repeat:no-repeat ;
+        background-size: cover;
+        width:3rem;
+        height:3rem;
+      }
+      #lindin{
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcGDrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBzG8SblEpSCiUUuQrkMhsCc+v7f3Ko4KjW/yLY0WXOez9mf4Ml3vSW1NYoAAAAAAAAAAAAAAAAAAAAAAAAAAADgYiriIsqU72FURcapGnXHk5aMue+xVCCT6n56x960Z2OpMt8jsozz+Xve0Xqc+h6SXbKzYOeSfex7UBap+J591lThHI3awPxw5KGcVFUj0RayaRrI6UaUj8GTpfA9NivknApkvTC2YdwjC9lc+h6dBWpFB7JFCIXx1FDIRr6HZ0Fq2EkZewjgXNMnLhVH34a+x/fPeMdYOK3/gchvTIFsXf/ZKR+bC+u/DcW1cS/d1f84jFobU+H3ANYXadNU2PU9PAvkd0Ngz/forMgMhU/1P5Xm4h0ZmHQCOAzz68WEPNdsg9iE+ZH4QATeBTApPYqf9PvoKIh99E2qOxQ3jVvf47JHDT5fMl5GAQW+3tNvnF/4N3shwrhJc8Ljw/Q0Q13MJ4GcRc8IORjP99vZfpWlQe2gH3EZx7Gs/4IJAADqQ3DJX/+FM38vqHyKlA5Hhx+Pj49X43468P34CheEiz9Z+pTMlrvFaQ6YbNrblRpKf6vNbHRNKX2yT/kwSVd5XluzGGs//Ew9NfIGS/RYs3X2yUGzp7dpnMYu+zPql1mbp46f+XxeSCkVxrpt8+bmWJgJOTPeYP7m5QkWi4Wye0d94t3m3sNmtFao5OyLvle7zPnRaKlQCb6+IDBfXvddJ1oq5BH5WE7JXd/xwWilUKnJpYGM9a7dPk5mpfCWP18cmO+okdOtaKVwYHxm5ZP1wOWNPBuFneUfBTK2dHkzyEbhwfirco3NxOF+aqPw8rPMbzuHV34bhX+h4e6q6KnQ4ZM6ngrZyNlG9FXo7hfMvgp7zt7o8FXIDq52U2+FznbTKgovmgAsalq4mB0mQqjJYfvler98o6sWhevuYPh2C5jz4WD1ReMPR4soi4W91dmtXy7MK469o7mpvcLn8nRaSWPi9PzH/++FCXvW3LuXpoXxi6MllK1tqHtGLBMd0zccLYNtFR60W8T0wkqv7yTQVuGTfpfLuvRXkms3sxo7hQlx/yy7NayOO3Uq3MXExY148PFY6OZyYafwihqsXNJfGteoMCGXQoYfzxo1KmxSO2kkJvTLcXUq3BreraFnp3UqNLwT3aJPpnUqPNBjTV+CKDScFVv0t+pUaLiytegXq1BoCQoLKNRDYfVQWEChHgqrh8ICCvVQWD0UFlCoh8LqobCAQj0UVg+FBRTqobB6KCygUA+F1UNhAYV6KKweCgso1ENh9VBYQKEeCquHwkKAhe1SIf2UoaFwSP+/dB29FtTvUsbnH+Q3VxTDmxOq+zffskqJiOtFpZda+OV/M6uQKepLof0NWAAAAAAAAAAAAAAAAAAAAAAAAAAAgAr8Aj5RWY0PDbn2AAAAAElFTkSuQmCC');
+        background-repeat:no-repeat ;
+        background-size: cover;
+        width:3rem;
+        height:3rem;
+      }
+      #instagram{
+        background-image: url("https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text-thumbnail.png");
+        background-repeat:no-repeat ;
+        background-size: cover;
+        width:3rem;
+        height:3rem;
+      }
+      #twitter{
+        background-image: url("https://w7.pngwing.com/pngs/419/837/png-transparent-telegram-icon-telegram-logo-computer-icons-telegram-blue-angle-triangle-thumbnail.png");
+        background-repeat:no-repeat ;
+        background-size: cover;
+        width:3rem;
+        height:3rem;
+        
+      }
+
+      .socailmedia{
+        cursor: pointer;
+        
+      }
+      .socailmedia a {
+        text-decoration: none;
+        color:none;
+        border-radius: 5px;
+      }
+
+      @media screen and (min-width:200px) and (max-width:700px){
+        header .navbar{
+            flex-direction:column;
+           
+
+        }
+        .tiem{
+          width:10rem;
+          color:white;
+         
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <li class="tiem"><a href="#" target="_blank">Home</a></li>
+        <li class="tiem"><a href="#" target="_blank">About us </a></li>
+        <li class="tiem"><a href="#" target="_blank">Contact us</a></li>
+        <li class="tiem"><a href="#" target="_blank">Help</a></li>
+        <li class="tiem"><a href="#" target="_blank">Sing In / Sing Up</a></li>
+      </nav>
+    </header>
+    <section class="img">
+      <img
+        src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2020/09/28191405/iStock-1194783078.jpg"
+        alt=""
+      />
+    </section>
+    <article>
+      <section class="container">
+        <div class="item" id="box1">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s-ygrSUGjha3wNKKQpepTt22hxzpJDSVqg&usqp=CAU"
+            alt="photo"
+          />
+          <div class="content">
+            Computer programming is the process of performing particular
+            computations, usually by designing and building executable computer
+            programs. Programming involves tasks such as analysis, generating
+            algorithms, profiling algorithms' accuracy and resource consumption,
+            and the implementation of algorithms.
+          </div>
+          <div class="wiki">
+            <a
+              href="https://en.wikipedia.org/wiki/Computer_programming"
+              target="_blank"
+              >Know more</a
+            >
+          </div>
+        </div>
+        <div class="item" id="box2">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s-ygrSUGjha3wNKKQpepTt22hxzpJDSVqg&usqp=CAU"
+            alt="photo"
+          />
+          <div class="content">
+            Computer programming is the process of performing particular
+            computations, usually by designing and building executable computer
+            programs. Programming involves tasks such as analysis, generating
+            algorithms, profiling algorithms' accuracy and resource consumption,
+            and the implementation of algorithms.
+          </div>
+          <div class="wiki">
+            <a
+              href="https://en.wikipedia.org/wiki/Computer_programming"
+              target="_blank"
+              >Know more</a
+            >
+          </div>
+        </div>
+        <div class="item" id="box3">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s-ygrSUGjha3wNKKQpepTt22hxzpJDSVqg&usqp=CAU"
+            alt="photo"
+          />
+          <div class="content">
+            Computer programming is the process of performing particular
+            computations, usually by designing and building executable computer
+            programs. Programming involves tasks such as analysis, generating
+            algorithms, profiling algorithms' accuracy and resource consumption,
+            and the implementation of algorithms.
+          </div>
+          <div class="wiki">
+            <a
+              class="wiki"
+              href="https://en.wikipedia.org/wiki/Computer_programming"
+              target="_blank"
+              >Know more</a
+            >
+          </div>
+        </div>
+        <div class="item" id="box4">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s-ygrSUGjha3wNKKQpepTt22hxzpJDSVqg&usqp=CAU"
+            alt="photo"
+          />
+          <div class="content">
+            Computer programming is the process of performing particular
+            computations, usually by designing and building executable computer
+            programs. Programming involves tasks such as analysis, generating
+            algorithms, profiling algorithms' accuracy and resource consumption,
+            and the implementation of algorithms.
+          </div>
+          <div class="wiki">
+            <a
+              href="https://en.wikipedia.org/wiki/Computer_programming"
+              target="_blank"
+              >Know more</a
+            >
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer>
+      <div class="socailmedia" id="facebook">
+        <a href="" target="_blank"  >    </a>
+      </div>
+      <div class="socailmedia" id="instagram">
+        <a href="" target="_blank"  >    </a>
+      </div>
+      <div class="socailmedia" id="watsapp">
+        <a href="" target="_blank"  >    </a>
+      </div>
+      <div class="socailmedia" id="lindin">
+        <a href="" target="_blank"  >   </a>
+      </div>
+      <div class="socailmedia" id="twitter">
+        <a href="bulb.html" target="_blank">   </a><a>
+      </div>
+    </footer>
+  </body>
+</html>

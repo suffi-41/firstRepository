@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragistration page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ragistration_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    height: 330px;
+    width:200px;
+    border:2px solid black;
+    position: relative;
+    top:150px;
+    border-radius: 15px;
+    background-color: #ebebeb;
+
+}
+
+.ragistration_page h2{
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.ragistration_page .ragistration_data{
+    margin:2px;
+    width:100%;
+
+}
+.ragistration_page .ragistration_data input, .ragistration_page .ragistration_data select{
+    margin-left: 10px;
+    width:90%;
+    height: 30px;
+    outline:none;
+    border:none;
+    border-bottom: 2px solid black;
+    border-radius:6px;
+  
+}
+.ragistration_page .ragistration_data input::placeholder{
+    color:black;
+}
+
+.ragistration_page .ragistration_data button{
+    position: relative;
+    top:10px;
+    margin-left: 10px;
+    background-color: blue;
+    color:white;
+    width:41%;
+    border-radius: 5px;
+}
+.ragistration_page button[type="submit"]:hover{
+    background-color: green;
+}
+
+.ragistration_page button[type="reset"]:hover{
+    background-color: red;
+}
+    </style>
+</head>
+
+<body>
+    <marquee><h1>WELCOME  TO  RAGISTRATION  PAGE</h1></marquee>
+    <section class="ragistration_page">
+        <h2>Ragistration now</h2>
+        <div class="ragistration_data">
+            <input type="text" placeholder="Enter the first name" required />
+        </div>
+        <div class="ragistration_data">
+            <input type="text" placeholder="Enter the last name" required />
+        </div>
+        <div class="ragistration_data">
+            <input type="number" placeholder="Phone no" required />
+        </div>
+        <div class="ragistration_data">
+            <input type="email" placeholder="Email" required />
+        </div>
+        <div class="ragistration_data">
+            <select name="gender" id="gender">
+                <option value="" selected>Select gender</option>
+                <option value="male">Make</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="ragistration_data">
+            <select name="city" id="city">
+                <option value="" selected>select city</option>
+                <option value="varanasi">Varanasi</option>
+                <option value="mubai">Mumbai</option>
+                <option value="patna">Patna</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="luckhnow">Lucknow</option>
+            </select>
+        </div>
+        <div class="ragistration_data submit">
+            <button  type="submit" onclick="alert('Ragistration successfully')"> Submit </button>
+            <button  type="reset">Reset</button>
+        </div>
+        
+        
+
+    </section>
+
+</body>
+
+</html>

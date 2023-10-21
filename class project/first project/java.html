@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color:black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div" class="divclass" data-sufiyan="aman_khan" bata-rahan="dada"></div>
+    <div id="div1" class="divclass"> insertAdjecentHtML</div>
+    <button onclick="bgcolor()">click</button>
+
+
+
+
+
+    <script>
+
+       
+        let div = document.getElementById('div');
+        let b= document.createElement('section');
+        b.innerHTML="i am section ocreaate"
+        let c = document.createElement('div');
+        c.innerHTML = 'create child'
+             div.append(c)
+             div.appendChild(b)
+
+             div.after(c)
+             div.prepend(c)
+             div.before(c)
+             div.remove(c)
+             div.replaceWith('section')
+
+             let d=document.getElementById('div1');
+             d.insertAdjacentHTML('afterbegin','<div> AFTER BEGIN</div>')
+             d.insertAdjacentHTML("beforebegin" ,'<div>beforebegin</div>' )
+             d.insertAdjacentHTML("beforeend" ,'<div>beforeend</div> ')
+             d.insertAdjacentHTML("afterend", '<div>afterend</div>')
+   
+            for(let i=0; i<10; i++){
+                 d.insertAdjacentHTML('afterbegin','<div> hii</div>');
+            }
+
+        
+    </script>
+</body>
+
+</html>
